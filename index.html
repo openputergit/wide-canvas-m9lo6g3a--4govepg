@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pull Request</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-[#0d1117] text-white">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const App = () => {
+            return (
+                <div className="min-h-screen">
+                    {/* Header */}
+                    <header className="bg-[#161b22] border-b border-gray-700 px-4 py-3">
+                        <div className="flex items-center justify-between max-w-[1280px] mx-auto">
+                            <div className="flex items-center space-x-4">
+                                <i className="bi bi-github text-white text-2xl"></i>
+                                <nav className="flex items-center space-x-4">
+                                    <button className="text-gray-300 hover:text-white">Product</button>
+                                    <button className="text-gray-300 hover:text-white">Solutions</button>
+                                    <button className="text-gray-300 hover:text-white">Resources</button>
+                                    <button className="text-gray-300 hover:text-white">Open Source</button>
+                                    <button className="text-gray-300 hover:text-white">Enterprise</button>
+                                    <button className="text-gray-300 hover:text-white">Pricing</button>
+                                </nav>
+                            </div>
+                            <div className="flex items-center space-x-4">
+                                <div className="relative">
+                                    <input 
+                                        type="text" 
+                                        placeholder="Search or jump to..."
+                                        className="bg-[#0d1117] border border-gray-700 rounded-md px-3 py-1 w-64 text-sm"
+                                    />
+                                    <span className="absolute right-2 top-1/2 transform -translate-y-1/2 border border-gray-600 px-1 text-xs rounded">
+                                        /
+                                    </span>
+                                </div>
+                                <button className="text-gray-300 hover:text-white">Sign in</button>
+                                <button className="border border-gray-400 rounded-md px-3 py-1 hover:text-white">
+                                    Sign up
+                                </button>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Main Content */}
+                    <main className="max-w-[1280px] mx-auto px-4 py-4">
+                        <div className="flex items-center space-x-2 mb-4">
+                            <span className="text-blue-400">shadcn-ui</span>
+                            <span className="text-gray-400">/</span>
+                            <span className="text-blue-400">ui</span>
+                            <span className="text-gray-500 text-sm border border-gray-600 rounded-full px-2">Public</span>
+                        </div>
+
+                        <div className="flex items-center space-x-4 mb-6">
+                            <button className="flex items-center space-x-1 text-gray-400 hover:text-white">
+                                <i className="bi bi-code"></i>
+                                <span>Code</span>
+                            </button>
+                            <button className="flex items-center space-x-1 text-gray-400 hover:text-white">
+                                <i className="bi bi-exclamation-circle"></i>
+                                <span>Issues</span>
+                                <span className="text-sm">918</span>
+                            </button>
+                            <button className="flex items-center space-x-1 text-white border-b-2 border-orange-500">
+                                <i className="bi bi-git"></i>
+                                <span>Pull requests</span>
+                                <span className="text-sm">810</span>
+                            </button>
+                        </div>
+
+                        <div className="bg-[#161b22] rounded-md p-4">
+                            <h1 className="text-2xl mb-4">docs: fix typo in CSS selector #6928</h1>
+                            <div className="flex items-center space-x-2 mb-4">
+                                <span className="bg-purple-600 text-white px-2 py-1 rounded-md text-sm">Merged</span>
+                                <span className="text-gray-400">kodiakhq merged 1 commit into</span>
+                                <span className="text-blue-400">shadcn-ui:main</span>
+                                <span className="text-gray-400">from</span>
+                                <span className="text-blue-400">YordanIliev2002:main</span>
+                                <span className="text-gray-400">on Mar 17</span>
+                            </div>
+
+                            <div className="border-t border-gray-700 pt-4">
+                                <div className="flex space-x-4">
+                                    <button className="flex items-center space-x-1 px-4 py-2 border-b-2 border-gray-700">
+                                        <i className="bi bi-chat"></i>
+                                        <span>Conversation</span>
+                                        <span>3</span>
+                                    </button>
+                                    <button className="flex items-center space-x-1 px-4 py-2">
+                                        <i className="bi bi-git"></i>
+                                        <span>Commits</span>
+                                        <span>1</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
